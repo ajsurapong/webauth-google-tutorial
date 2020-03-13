@@ -28,7 +28,7 @@ app.use("/profile", profileRoutes);
 //----- root ----
 app.get("/", (req, res) => {
     // res.sendFile(path.join(__dirname, "views/home.html"));
-    res.render("home.ejs");
+    res.render("home.ejs", {user: req.user});
 });
 
 const PORT = 3000;
